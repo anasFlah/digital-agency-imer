@@ -1009,6 +1009,40 @@ body {
   animation-delay: 0s !important;
 }
 
+/* ===== MISSING CLASSES ===== */
+.padding-hero-08 {
+  padding-top: 0;
+}
+
+.padding-stacked-pre-mtext {
+  padding-bottom: 0;
+}
+
+.padding-mtext {
+  padding: 2rem 0;
+}
+
+.fullwidth-container {
+  max-width: none;
+  padding: 0;
+}
+
+.muted-extra {
+  opacity: 0.8;
+}
+
+.one-line {
+  white-space: nowrap;
+}
+
+.item-regular {
+  font-weight: 400;
+}
+
+.text {
+  color: var(--base);
+}
+
 @keyframes slideRightUp {
   from {
     opacity: 0;
