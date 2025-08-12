@@ -21,7 +21,7 @@ const Header = () => {
       <div className="mxd-header__logo loading__fade">
         <a href="#0" className="mxd-logo">
           {/* logo icon */}
-          <svg className="mxd-logo__image" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 56 56" style={{enableBackground: 'new 0 0 56 56'}} xmlSpace="preserve">
+          <svg className="mxd-logo__image" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 56 56" xmlSpace="preserve">
             <style type="text/css">
               {`.mxd-logo__bg{fill:var(--base-opp);}
                 .mxd-logo__cat{clip-path:url(#mxd-logo__id);fill:var(--base);}`}

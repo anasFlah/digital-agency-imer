@@ -38,9 +38,9 @@ const Hero = () => {
               <video 
                 className="mxd-hero-08__video" 
                 preload="auto" 
-                autoPlay="autoplay" 
-                loop="loop" 
-                muted="muted" 
+                autoPlay={true}
+                loop={true}
+                muted={true}
                 poster="video/540x310_video-01.webp"
               >
                 <source type="video/mp4" src="video/540x310_video-01.mp4" />

@@ -3,7 +3,7 @@ import { Heart, Copyright } from '@phosphor-icons/react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,7 +14,7 @@ const Navigation = () => {
     }
   };
 
-  const toggleSubmenu = (index) => {
+  const toggleSubmenu = (index: number) => {
     if (activeSubmenu === index) {
       setActiveSubmenu(null);
     } else {
@@ -29,7 +29,7 @@ const Navigation = () => {
 
   // Close menu on escape key
   useEffect(() => {
-    const handleEscape = (e) => {
+    const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         closeMenu();
       }
@@ -211,9 +211,9 @@ const Navigation = () => {
                         className="menu-video" 
                         id="inner-video" 
                         preload="auto" 
-                        autoPlay="autoplay" 
-                        loop="loop" 
-                        muted="muted" 
+                        autoPlay={true}
+                        loop={true}
+                        muted={true}
                         poster="video/540x310_video-01.webp"
                       >
                         <source type="video/mp4" src="video/540x310_video-01.mp4" />

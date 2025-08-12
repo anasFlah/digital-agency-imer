@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="fullwidth-text__tl-trigger"></div>
         <div className="mxd-footer__fullwidth-text personal anim-top-to-bottom">
           <svg className="mxd-footer__svg-v2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 518 72" style={{enableBackground: 'new 0 0 518 72'}} xmlSpace="preserve">
+            viewBox="0 0 518 72" xmlSpace="preserve">
             <path d="M18.9,71.9C13,71.9,8.4,70.5,5,67.6c-3.4-2.9-5-6.7-5-11.4c0-5,1.7-8.8,5.1-11.5c3.4-2.7,8.3-4.1,14.8-4.1h15.5v-2
               c0-6.2-3.6-9.3-10.8-9.3c-6.1,0-9.8,2.2-11.1,6.6H0.8c1.1-5.4,3.6-9.5,7.7-12.4c4.1-2.8,9.4-4.3,16-4.3c7.4,0,13.1,1.7,17,5
               c3.9,3.4,5.8,8.2,5.8,14.7v19.4h6V71H40.4v-8.1h-3.6c-1.7,2.9-4.1,5.1-7.1,6.7C26.9,71.1,23.2,71.9,18.9,71.9z M20.8,62.2
