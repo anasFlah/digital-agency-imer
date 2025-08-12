@@ -17,11 +17,11 @@ const Header = () => {
 
   return (
     <header id="header" className="mxd-header">
-      {/* Header Logo */}
+      {/* header logo */}
       <div className="mxd-header__logo loading__fade">
         <a href="#0" className="mxd-logo">
-          {/* Logo Icon */}
-          <svg className="mxd-logo__image" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 56 56" xmlSpace="preserve">
+          {/* logo icon */}
+          <svg className="mxd-logo__image" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 56 56" style={{enableBackground: 'new 0 0 56 56'}} xmlSpace="preserve">
             <style type="text/css">
               {`.mxd-logo__bg{fill:var(--base-opp);}
                 .mxd-logo__cat{clip-path:url(#mxd-logo__id);fill:var(--base);}`}
@@ -55,12 +55,11 @@ const Header = () => {
                 c0-0.5-0.4-0.9-0.9-0.9h-0.9c-0.5,0-0.9-0.4-0.9-0.9v-0.9c0-0.5,0.4-0.9,0.9-0.9h0.9C49,40.1,49.5,39.7,49.5,39.2L49.5,39.2z"/>
             </g>
           </svg>
-          {/* Logo Text */}
+          {/* logo text */}
           <span className="mxd-logo__text">rayo<br/>template</span>
         </a>
       </div>
-
-      {/* Header Controls */}
+      {/* header controls */}
       <div className="mxd-header__controls loading__fade">
         <button 
           id="color-switcher" 
