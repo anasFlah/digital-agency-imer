@@ -59,8 +59,8 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {children}
-        <script src="/js/libs.min.js"></script>
-        <script src="/js/app.min.js"></script>
+        <script src="/js/libs.min.js" defer></script>
+        <script src="/js/app.min.js" defer></script>
       </body>
     </html>
   )
