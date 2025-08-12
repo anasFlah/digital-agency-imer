@@ -1,6 +1,7 @@
 import React from 'react';
+import { Play } from '@phosphor-icons/react';
 
-const Hero: React.FC = () => {
+const Hero = () => {
   return (
     <div className="mxd-section">
       <div className="mxd-hero-08">
@@ -11,12 +12,12 @@ const Hero: React.FC = () => {
                 <div className="hero-08-headline__image">
                   <img 
                     className="mxd-rotate-slow" 
-                    src="/img/hero/16_hero-img.webp" 
+                    src="img/hero/16_hero-img.webp" 
                     alt="Hero Image"
                   />
                 </div>
                 <div className="hero-08-headline__title hero-08-slide-out-scroll loading__item">
-                  <h1>Creative visual designer<br />based in Odesa</h1>
+                  <h1>Creative visual designer<br/>based in Odesa</h1>
                 </div>
               </div>
             </div>
@@ -37,14 +38,14 @@ const Hero: React.FC = () => {
               <video 
                 className="mxd-hero-08__video" 
                 preload="auto" 
-                autoPlay 
-                loop 
-                muted 
-                poster="/video/540x310_video-01.webp"
+                autoPlay="autoplay" 
+                loop="loop" 
+                muted="muted" 
+                poster="video/540x310_video-01.webp"
               >
-                <source type="video/mp4" src="/video/540x310_video-01.mp4" />
-                <source type="video/webm" src="/video/540x310_video-01.webm" />
-                <source type="video/ogv" src="/video/540x310_video-01.ogv" />
+                <source type="video/mp4" src="video/540x310_video-01.mp4" />
+                <source type="video/webm" src="video/540x310_video-01.webm" />
+                <source type="video/ogv" src="video/540x310_video-01.ogv" />
               </video>
               <div className="mxd-hero-08__video-btn">
                 <a 
@@ -54,7 +55,7 @@ const Hero: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="ph-fill ph-play"></i>
+                  <Play size={24} weight="fill" />
                 </a>
               </div>
             </div>

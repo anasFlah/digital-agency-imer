@@ -1,39 +1,44 @@
 import React, { useState, useEffect } from 'react';
+import { ArrowUp } from '@phosphor-icons/react';
 
-const ToTopButton: React.FC = () => {
+const ToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+  // Show button when page is scrolled up to given distance
+  const toggleVisibility = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
 
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
-
+  // Set the top cordinate to 0
+  // make scrolling smooth
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth"
     });
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleVisibility);
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
 
   return (
     <>
       {isVisible && (
-        <a 
-          href="#0" 
-          id="to-top" 
-          className="btn btn-to-top slide-up anim-no-delay"
+        <button
+          className="scroll-to-top visible"
           onClick={scrollToTop}
+          aria-label="Scroll to top"
         >
-          <i className="ph ph-arrow-up"></i>
-        </a>
+          <ArrowUp size={20} />
+        </button>
       )}
     </>
   );

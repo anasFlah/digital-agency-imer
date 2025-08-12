@@ -1,39 +1,27 @@
 import React from 'react';
 
-interface Project {
-  id: number;
-  title: string;
-  tags: string[];
-  mobileImage: string;
-  desktopImage: string;
-  link: string;
-}
-
-const ProjectsStack: React.FC = () => {
-  const projects: Project[] = [
+const ProjectsStack = () => {
+  const projects = [
     {
       id: 1,
-      title: "Studio template",
+      mobileImage: "img/works/preview/1080x1920_prv-04.webp",
+      desktopImage: "img/works/preview/1920x1080_prv-04.webp",
       tags: ["Brand", "Illustrations", "Web"],
-      mobileImage: "/img/works/preview/1080x1920_prv-04.webp",
-      desktopImage: "/img/works/preview/1920x1080_prv-04.webp",
-      link: "#project-1"
+      title: "Studio template"
     },
     {
       id: 2,
-      title: "AI Experiments",
+      mobileImage: "img/works/preview/1080x1920_prv-01.webp",
+      desktopImage: "img/works/preview/1920x1080_prv-01.webp",
       tags: ["Sora", "AI", "Editorial"],
-      mobileImage: "/img/works/preview/1080x1920_prv-01.webp",
-      desktopImage: "/img/works/preview/1920x1080_prv-01.webp",
-      link: "#project-2"
+      title: "AI Experiments"
     },
     {
       id: 3,
-      title: "Mobile app design",
+      mobileImage: "img/works/preview/1080x1920_prv-05.webp",
+      desktopImage: "img/works/preview/1920x1080_prv-05.webp",
       tags: ["Design", "UI/UX", "Android"],
-      mobileImage: "/img/works/preview/1080x1920_prv-05.webp",
-      desktopImage: "/img/works/preview/1920x1080_prv-05.webp",
-      link: "#project-3"
+      title: "Mobile app design"
     }
   ];
 
@@ -48,18 +36,10 @@ const ProjectsStack: React.FC = () => {
               <div className="projects-stack">
                 {projects.map((project) => (
                   <div key={project.id} className="stack-item">
-                    <a className="mxd-projects-stack__inner justify-between" href={project.link}>
+                    <a className="mxd-projects-stack__inner justify-between" href="#0">
                       <div className="mxd-projects-stack__image">
-                        <img 
-                          className="mobile" 
-                          src={project.mobileImage} 
-                          alt={`${project.title} Mobile Preview`}
-                        />
-                        <img 
-                          className="desktop" 
-                          src={project.desktopImage} 
-                          alt={`${project.title} Desktop Preview`}
-                        />
+                        <img className="mobile" src={project.mobileImage} alt="Project Preview" />
+                        <img className="desktop" src={project.desktopImage} alt="Project Preview" />
                       </div>
                       <div className="mxd-projects-stack__tags">
                         {project.tags.map((tag, index) => (

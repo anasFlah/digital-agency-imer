@@ -1,27 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import './App.css';
+import React, { useState, useEffect } from 'react';
 import Loader from './components/Loader';
 import Navigation from './components/Navigation';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import ProjectsStack from './components/ProjectsStack';
 import MarqueeText from './components/MarqueeText';
+import About from './components/About';
+import Services from './components/Services';
 import Footer from './components/Footer';
 import ToTopButton from './components/ToTopButton';
+import './App.css';
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // Simulate loading time
     const timer = setTimeout(() => {
-      setIsLoading(false);
+      setLoading(false);
     }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  if (isLoading) {
+  if (loading) {
     return <Loader />;
   }
 
@@ -33,6 +35,8 @@ function App() {
         <Hero />
         <ProjectsStack />
         <MarqueeText />
+        <About />
+        <Services />
       </main>
       <Footer />
       <ToTopButton />

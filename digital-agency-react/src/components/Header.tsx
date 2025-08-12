@@ -1,20 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { ArrowUpRight } from '@phosphor-icons/react';
 
-const Header: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const Header = () => {
+  const [theme, setTheme] = useState('light');
 
-  const toggleColorMode = () => {
-    setIsDarkMode(!isDarkMode);
-    // Here you would implement the actual color mode toggle logic
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
   };
+
+  useEffect(() => {
+    // Set initial theme
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
 
   return (
     <header id="header" className="mxd-header">
-      {/* header logo */}
+      {/* Header Logo */}
       <div className="mxd-header__logo loading__fade">
-        <a href="#home" className="mxd-logo">
-          {/* logo icon */}
-          <svg className="mxd-logo__image" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 56 56" style={{enableBackground: 'new 0 0 56 56'}} xmlSpace="preserve">
+        <a href="#0" className="mxd-logo">
+          {/* Logo Icon */}
+          <svg className="mxd-logo__image" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 56 56" xmlSpace="preserve">
             <style type="text/css">
               {`.mxd-logo__bg{fill:var(--base-opp);}
                 .mxd-logo__cat{clip-path:url(#mxd-logo__id);fill:var(--base);}`}
@@ -48,11 +55,12 @@ const Header: React.FC = () => {
                 c0-0.5-0.4-0.9-0.9-0.9h-0.9c-0.5,0-0.9-0.4-0.9-0.9v-0.9c0-0.5,0.4-0.9,0.9-0.9h0.9C49,40.1,49.5,39.7,49.5,39.2L49.5,39.2z"/>
             </g>
           </svg>
-          {/* logo text */}
-          <span className="mxd-logo__text">rayo<br />template</span>
+          {/* Logo Text */}
+          <span className="mxd-logo__text">rayo<br/>template</span>
         </a>
       </div>
-      {/* header controls */}
+
+      {/* Header Controls */}
       <div className="mxd-header__controls loading__fade">
         <button 
           id="color-switcher" 
@@ -60,12 +68,12 @@ const Header: React.FC = () => {
           type="button" 
           role="switch" 
           aria-label="light/dark mode" 
-          aria-checked={!isDarkMode}
-          onClick={toggleColorMode}
+          aria-checked={theme === 'light'}
+          onClick={toggleTheme}
         ></button>
-        <a className="btn btn-anim btn-default btn-mobile-icon btn-outline slide-right-up" href="#contact">
+        <a className="btn btn-anim btn-default btn-mobile-icon btn-outline slide-right-up" href="#0">
           <span className="btn-caption">Say Hello</span>
-          <i className="ph-bold ph-arrow-up-right"></i>
+          <ArrowUpRight size={20} weight="bold" />
         </a>
       </div>
     </header>
